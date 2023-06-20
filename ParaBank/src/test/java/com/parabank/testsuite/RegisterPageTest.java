@@ -23,6 +23,20 @@ public class RegisterPageTest extends TestBase {
     @Test
     public void userShouldRegisterAccountSuccessfully(){
         verifyThatSigningUpPageDisplay();
-        //register.enter
+        register.enterFName("Mahesh");
+        register.enterLName("Hirpara");
+        register.enterAddress("Croydon");
+        register.enterCity("UK");
+        register.enterState("London");
+        register.enterZipCode("SW1 DFS");
+        register.enterPhone("121211");
+        register.enter_ssn("23232");
+        register.enter_userName("test23");
+        register.enter_password("test1");
+        register.enter_confirmPassword("test1");
+        register.clickonRegisterButton1();
+        String actualMessage =register.getSuccessMessage();
+        String expectedMessage ="Your account was created successfully. You are now logged in";
+        Assert.assertEquals(actualMessage,expectedMessage);
     }
 }
