@@ -13,7 +13,6 @@ public class HomePage extends Utility {
     public void clickOnLoginLink() {
         Reporter.log("Click on Login Link" +loginLink.toString()+"<br>");
         clickOnElement(loginLink);
-
     }
 
 
