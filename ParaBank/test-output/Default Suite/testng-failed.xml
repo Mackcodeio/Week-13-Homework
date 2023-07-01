@@ -5,9 +5,11 @@
     <classes>
       <class name="com.parabank.testsuite.LoginPageTest">
         <methods>
+          <include name="userShouldLoginSuccessfullyWithValidCredentials"/>
           <include name="verifyErrorMessageWithInvalidCredentials"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="userShouldLogOutSuccessfully"/>
         </methods>
       </class> <!-- com.parabank.testsuite.LoginPageTest -->
     </classes>

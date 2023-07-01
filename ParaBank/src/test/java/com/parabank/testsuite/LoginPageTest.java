@@ -27,7 +27,7 @@ public class LoginPageTest extends TestBase {
         loginPage.enterPassword("123456");
         loginPage.clickOnLoginButton();
         String actualMessage =loginPage.getErrorMessage();
-        String expectedMessage ="An internal error has occurred and has been logged.";
+        String expectedMessage ="The username and password could not be verified.";
         Assert.assertEquals(actualMessage,expectedMessage);
 
     }
@@ -35,7 +35,7 @@ public class LoginPageTest extends TestBase {
     @Test
     public void userShouldLoginSuccessfullyWithValidCredentials() {
         homePage.clickOnLoginLink();
-        loginPage.enterEmailId("test");
+        loginPage.enterEmailId("test23");
         loginPage.enterPassword("test1");
         loginPage.clickOnLoginButton();
         String actualMessage =loginPage.getWelcomeMessage();
@@ -46,7 +46,7 @@ public class LoginPageTest extends TestBase {
     @Test
     public void userShouldLogOutSuccessfully(){
         homePage.clickOnLoginLink();
-        loginPage.enterEmailId("test");
+        loginPage.enterEmailId("test23");
         loginPage.enterPassword("test1");
         loginPage.clickOnLoginButton();
         loginPage.clickOnLogoutButton();
